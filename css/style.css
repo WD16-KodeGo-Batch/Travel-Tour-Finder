@@ -1,0 +1,144 @@
+/* Cokor Palette
+FF731D
+FFF7E9
+5F9DF7
+1746A2*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+/* ----------------------------------- Booking Form Section -----------------------------------  */
+.booking h2{
+    text-align: center;
+    padding: 5px;
+}
+.booking p{
+    padding-top: 20px;
+}
+.booking{
+    width: 95%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+.booking-col{
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+}
+.booking-form{
+    width: 600px;
+    padding: 15px;
+    background-color: #FFF7E9;
+}
+.booking-weather img{
+    width: 400px;
+    padding: 0px 30px;
+}
+.container{
+    padding: 15px;
+}
+.row{
+    margin: 15px 0;
+}
+.row-inlined{
+    width: 48%;
+    display: inline-block;
+    float: left; 
+    margin-left: 1%;
+}
+/* Floating column for labels: 30% width */
+.col-30{
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+/* Floating column for inputs: 70% width */
+.col-70{
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+/* Floating column for labels: 40% width */
+.col-40{
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+}/* Floating column for labels: 60% width */
+.col-60{
+    float: left;
+    width: 60%;
+    margin-top: 30px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style inputs, select elements and textareas */
+input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+  /* Style the submit button */
+.call-to-action{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}  
+.booking-btn{
+    text-decoration: none;
+    background-color: #0096FF;
+    color: #fff;
+    font-weight: 500;
+    padding: 18px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: transform 0.5s;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.booking-btn:hover{
+    background: #FF731D;
+    transition: 1s;
+}
+@media only screen and (max-width: 600px){
+    .col-30, .col-70, .col-40, .col-60, input, .place{
+        width: 90%;
+        margin-top: 0;
+    } 
+    .row, .row-inlined, .booking-form, .booking-col, .booking-weather{
+        flex-direction: column;
+        width: 100%;
+    }
+    .booking-weather img{
+        width: 250px;
+        padding-top: 30px;
+    }
+    .booking-btn{
+        width: 150px;
+    }
+}
+  
