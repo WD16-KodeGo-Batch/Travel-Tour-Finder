@@ -56,8 +56,7 @@ hr{
 }
 .booking-row-inlined{
     width: 48%;
-    display: inline-block;
-    float: left; 
+    display: inline-block; 
     margin-left: 1%;
 }
 /* Floating column for labels: 30% width */
