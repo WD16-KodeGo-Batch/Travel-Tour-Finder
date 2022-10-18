@@ -1,29 +1,25 @@
-/* Cokor Palette
-FF731D
-FFF7E9
-5F9DF7
-1746A2*/
+/* ----------------------------------- Booking Form Section -----------------------------------  */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
 
+/* Cokor Palette
+#001b48
+#004581
+#018abd
+#97cbdc
+#dde8f0*/
 *{
     margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
-body {
-    margin: 0 auto;
-    padding: 30px;
-    
-}
-/* ----------------------------------- Booking Form Section -----------------------------------  */
-.booking h2{
-    text-align: center;
-    padding: 5px;
-}
-.booking p{
-    padding-top: 20px;
-}
-hr{
-    margin-top: 10px;
+body{
+    font-family: 'Jost', sans-serif;
+    background-color: #dde8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 .booking{
     width: 95%;
@@ -31,104 +27,153 @@ hr{
     padding-top: 15px;
     padding-bottom: 15px;
     overflow: hidden;
+    justify-content: space-between;
 }
-.booking-col{
+.booking-row{
+    margin: 10px 0;
     flex-basis: 45%;
     margin-bottom: 20px;
     text-align: left;
     display: flex;
-}
-.booking-form{
-    width: 600px;
-    padding: 15px;
-    background-color: #FFF7E9;
+    gap: 30px;
 }
 .booking-weather img{
     width: 400px;
     padding: 0px 30px;
 }
-.booking-container{
-    padding: 15px;
-
-}
-.booking-row{
-    margin: 10px 0;
-}
-.booking-row-inlined{
-    width: 48%;
-    display: inline-block; 
-    margin-left: 1%;
-}
-/* Floating column for labels: 30% width */
-.col-30{
-    float: left;
-    width: 30%;
-    margin-top: 6px;
-}
-/* Floating column for inputs: 70% width */
-.col-70{
-    float: left;
-    width: 70%;
-    margin-top: 6px;
-}
-/* Floating column for labels: 40% width */
-.col-40{
-    float: left;
-    width: 40%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}/* Floating column for labels: 60% width */
-.col-60{
-    float: left;
-    width: 60%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-/* Clear floats after the columns */
-.booking-row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* Style inputs, select elements and textareas */
-input, select, textarea{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ffff;
-    border-radius: 5px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-/* Style the label to display next to the inputs */
-label {
-    padding: 12px 12px 12px 0px;
-    display: inline-block;
-}
-  /* Style the submit button */
-.call-to-action{
-    position: relative;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}  
-.booking-btn{
-    text-decoration: none;
-    background-color: #0096FF;
-    color: #fff;
-    font-weight: 500;
-    padding: 18px 30px;
-    margin-top: 20px;
+.container{
+    background-color: #97cbdc;
     border-radius: 30px;
-    transition: transform 0.5s;
+    width: 700px;
+}
+.form-header{
+    background-color: #018abd;
+    padding: 20px;
+    border-radius: 30px 30px 0 0;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
 }
-.booking-btn:hover{
-    background: #FF731D;
-    transition: 1s;
+.form-header h2{
+    color: #020202;
 }
+.form-header p{
+    color: #020202;
+}
+hr{
+    color: #FB5C05;
+}
+form{
+    padding: 30px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group label{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.form-group input, .form-group select{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #020202;
+    outline: none;
+    border: none;
+}
+.guest-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.guest-detail input, .guest-detail select{
+    width: 280px;
+}
+.check-in-out{
+    display: flex;
+    justify-content: space-between;
+}
+i{
+    color: #020202;
+    font-size: 22px;
+}
+.check-in-out input{
+    width: 280px;
+}
+.destination-adults-children{
+    display: flex;
+    gap: 15px;  
+}
+.destination-adults-children input{
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 5px;
+    color: #020202;
+    width: 60px;
+}
+.form-group .radio-label{
+    color: #020202;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.buttons{
+    text-align: center;
+}
+.submit-btn{
+    background-color: #FB5C05;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    height: 60px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#place.invalid, #check-in.invalid, #check-out.invalid, #adults.invalid, #children.invalid{
+    border: 1px solid #FB5C05;
+}
+
+.error-msg{
+    color: #FB5C05;
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+}
+
+.form-group.error .error-msg{
+    display: block;
+}
+
+@media only screen and (max-width: 600px){
+    .label, input, select{
+        width: 90%;
+        margin-top: 0;
+    } 
+    .container, .booking-row, .form-group, .guest-detail, .check-in-out, .destination-adults-children, .booking-weather{
+        flex-direction: column;
+        width: 100%;
+    }
+    .booking-weather img{
+        width: 350px;
+        padding-top: 30px;
+    }
+    .booking-btn{
+        width: 150px;
+    }
+    .radio-label{
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 0.5em;
+    }
+ 
+}
+
+
 @media only screen and (max-width: 600px){
     .col-30, .col-70, .col-40, .col-60, input, .place{
         width: 90%;

@@ -1,21 +1,82 @@
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
+let form = document.getElementById("form");
 
-if(date < 10) {
-  date = '0' + date;
-}
-if(month < 10) {
-  month = '0' + month;
-}
+let fullnameInput = document.getElementById("fullname");
+let phoneInput = document.getElementById("phone");
+let checkinDate = document.getElementById("check-in");
+let checkoutDate = document.getElementById("check-out");
+let travelRadios = document.querySelectorAll('input[name="travel"]');
 
-var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#checkin-date");
-var checkoutElem = document.querySelector("#checkout-date");
+let formGroup = document.getElementsByClassName('form-group');
 
-checkinElem.setAttribute("min", dateTomorrow);
+// console.log(form)
+// console.log(fullnameInput)
+// console.log(emalInput)
+// console.log(checkinDate)
+// console.log(checkoutDate)
+// console.log(travelRadios)
+// console.log(searchForRadios)
+console.log(formGroup)
 
-checkinElem.onchange = function () {
-    checkoutElem.setAttribute("min", this.value);
+$(function () {
+    $("#check-in").datepicker({
+        minDate: 0,
+        maxDate: "+1M +10D",
+    });
+
+    $("#check-out").datepicker({
+        minDate: 1,
+        maxDate: "+1Y"
+    });
+});
+
+form.addEventListener("submit", validateForm);
+
+function validateForm(e) {
+    e.preventDefault();
+
+    fullnameInputValue = fullnameInput.value;
+    if (fullnameInputValue === "") {
+        formGroup[0].classList.add("error");
+        fullnameInput.classList.add("invalid")
+    } else {
+        formGroup[0].classList.remove("error");
+        fullnameInput.classList.remove("invalid")
+    }
+   /*  if (emailInputValue === "") {
+        formGroup[3].classList.add("error");
+        emailInput.classList.add("invalid")
+    } else {
+        formGroup[3].classList.remove("error");
+        emailInput.classList.remove("invalid")
+    } */
+
+    if (checkinDate.value === "") {
+        formGroup[2].classList.add("error");
+        checkinDate.classList.add("invalid")
+
+
+    } else {
+        formGroup[2].classList.remove("error");
+        checkinDate.classList.remove("invalid")
+    }
+
+    if (checkoutDate.value === "") {
+        formGroup[4].classList.add("error");
+        checkoutDate.classList.add("invalid")
+
+
+    } else {
+        formGroup[4].classList.remove("error");
+        checkoutDate.classList.remove("invalid")
+    }
+
+    if(travelRadios[0].checked ===  false && travelRadios[1].checked === false){
+        formGroup[9].classList.add("error");
+    } else {
+        formGroup[9].classList.remove("error");
+    }
+
+   if(formGroup[0].classList.contains("error") === false && formGroup[2].classList.contains("error") === false && formGroup[4].classList.contains("error") === false && formGroup[6].classList.contains("error") === false && formGroup[10].classList.contains("error") === false){
+       alert("form submitted");
+   }
 }

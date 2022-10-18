@@ -6,96 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Tour Finder</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" 
+    integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <style>
+    <!-- <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-        </style>
+    </style> -->
 
 </head>
 <body>
 <!-- ----------------------------------- Booking Form Section ----------------------------------- -->
 <section class="booking">
     <div class="booking-row">
-        <div class="booking-col">
-            <form class="booking-form">
-                <div class="booking-container">
-                    <h2>Book a trip now!</h2>
-                    <hr>
-                    <p>Please fill out this form with required information.</p>
-                    <div class="booking-row">
-                        <div class="col-30">
-                            <label for="name">Complete Name</label>
-                        </div>
-                        <div class="col-70">
-                            <input type="text" id="name" name="visitor_name" placeholder="Enter your name" required>
-                        </div>
-                    </div>
-                    <div class="booking-row">
-                        <div class="col-30">
-                            <label for="email">Your E-mail</label>
-                        </div>
-                        <div class="col-70">
-                            <input type="email" id="email" name="visitor_email" placeholder="Enter your email" required> 
-                        </div>
-                    </div>
-                    <div class="booking-row">
-                        <div class="col-30">
-                            <label for="phone">Your Phone</label>
-                        </div>
-                        <div class="col-70">
-                            <input type="tel" id="phone" name="visitor_phone" placeholder="Enter your phone" required> 
+        <div class="container">
+            <div class="form-header">
+                <h2>Book a trip now!</h2>
+                <p>Whoever you are, whatever you seek, it all starts from here.</p>
+            </div>
+            <hr>
+            <div class="form-container">
+                <form action="#" id="form">       
+
+                    <div class="guest-detail">
+                        <div class="form-group guest ">
+                            <label for="fullname">
+                                Complete Name:
+                            </label>
+                                <input type="text" id="fullname" class="form-control" placeholder="Enter your complete name">
+                            <span class="error-msg">This field cannot be empty</span>
+                        </div> 
+                        <div class="form-group">
+                            <label for="email">
+                                Your Email:
+                            </label>
+                                <input type="text" id="email" class="form-control" placeholder="Enter your email">
+                            <span class="error-msg">This field cannot be empty</span>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div class="booking-container">
-                    <p>Select Date:</p>
-                    <div class="booking-row-inlined">
-                        <div class="col-40">
-                            <label for="checkin-date">Check-in</label>
+
+                    <div class="check-in-out">
+                        <div class="form-group">
+                            <label for="checkin"> Check-in date:</label>
+                            <div class="form-group form-group-check-in-out">
+                                <input type="text" id="check-in" class="form-control">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="error-msg">This field cannot be empty</span>
+                            </div>
                         </div>
-                        <div class="col-60">
-                            <input type="date" id="checkin-date" name="checkin" required>
-                        </div>
-                    </div>
-                    <div class="booking-row-inlined">
-                        <div class="col-40">
-                            <label for="checkout-date">Check-out</label>
-                        </div>
-                        <div class="col-60">
-                            <input type="date" id="checkout-date" name="checkout" required>
-                        </div>
-                    </div>
-                    <div class="booking-row-inlined">
-                        <div class="col-40">
-                            <label for="adult">Adults</label>
-                        </div>
-                        <div class="col-60">
-                            <input type="number" id="adult" name="total_adults" placeholder="1" min="1" required>
+                        <div class="form-group">
+                            <label for="checkout"> Check-out date:</label>
+                            <div class="form-group form-group-check-out-out">
+                                <input type="text" id="check-out" class="form-control">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="error-msg">This field cannot be empty</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="booking-row-inlined">
-                        <div class="col-40">
-                            <label for="child">Children</label>
-                        </div>
-                        <div class="col-60">
-                            <input type="number" id="child" name="total_children" placeholder="1" min="0" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="booking-container">
-                    <div class="booking-row">
-                        <div class="col-30">
-                            <label for="place-selection">Select Place:</label>
-                        </div>
-                        <div class="col-70">
-                            <select class="place"  id="place-selection" name="place-preference" required>
+                    <div class="destination-adults-children">
+                        <div class="form-group">
+                            <label for="place">Select Place: </label>
+                            <select name="" class="form-control" id="place">
                                 <option value="">Choose a place from the list</option>
                                 <option value="NCR">Manila</option>
                                 <option value="CAR">Baguio</option>
                                 <option value="Region-1">La Union</option>
                                 <option value="Region-2">Tuguegarao</option>
-                                <option value="Region-30">Pampanga</option>
+                                <option value="Region-3">Pampanga</option>
                                 <option value="Region-4">Calamba</option>
                                 <option value="Mimaropa">Calapan</option>
                                 <option value="Region-5">Legaspi</option>
@@ -106,24 +87,46 @@
                                 <option value="Region-10">Cagayan de Oro City</option>
                                 <option value="Region-11">Davao City</option>
                                 <option value="Region-12">Koronadal City</option>
-                                <option value="Region-130">Butuan City</option>
+                                <option value="Region-13">Butuan City</option>
                                 <option value="BARMM">Cotabato City</option>
                             </select>
-                        </div>  
-                    </div>
-                    <div class="booking-row">
-                        <div class="col-30">
-                            <label for="message">Anything Else?</label>
                         </div>
-                        <div class="col-70">
-                            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                        <div class="form-group">
+                            <label for="adults"> Adults: </label>
+                            <input type="number" id="adult" name="total_adults" placeholder="2" min="1">
+
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="children"> Children: </label>
+                            <input type="number" id="child" name="total_children" placeholder="0" min="0">
+                        </div>
                     </div>
-                </div>
-                <div class="call-to-action">
-                    <section type="submit"><a href="" class="booking-btn">Submit your booking</a></section>
-                </div> 
-            </form>  
-        </div>
+    
+                 
+                        <div class="form-group">
+                            <label for="travelling"> Travelling for: </label>
+                            <label for="work" class="radio-label">
+                                <input type="radio" name="travel" id="work">
+                                Work
+                            </label>
+                            <label for="leisure" class="radio-label">
+                                <input type="radio" name="travel" id="leisure">
+                                Leisure
+                            </label>
+                            <span class="error-msg">This field cannot be empty</span>  
+                        </div>
+    
+    
+                        <div class="buttons">
+                            <button class="btn submit-btn">
+                                Submit your booking
+                            </button>
+                        </div>
+    
+                </form>
+            </div>
+        </div> 
         <div class="booking-weather">
             <!-- weather widget start -->
             <a target="_blank" href="https://www.booked.net/weather/clark-feeport-philippines-w3063401">
@@ -133,6 +136,9 @@
         </div>
     </div>
 </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./bookingForm.js"></script>
 <!-- ----------------------------------- End of Booking Form Section ----------------------------------- -->    
 </body>
 </html>
