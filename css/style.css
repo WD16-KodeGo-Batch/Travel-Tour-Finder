@@ -134,7 +134,7 @@ i{
     cursor: pointer;
 }
 
-#place.invalid, #check-in.invalid, #check-out.invalid, #adults.invalid, #children.invalid{
+#fullname.invalid,#email.invalid, #place.invalid, #check-in.invalid, #check-out.invalid, #adults.invalid, #children.invalid{
     border: 1px solid #FB5C05;
 }
 
@@ -170,12 +170,15 @@ i{
         grid-template-columns: 1em auto;
         gap: 0.5em;
     }
+    .check-in-out i{
+        display: none;
+    }
  
 }
 
 
-@media only screen and (max-width: 600px){
-    .col-30, .col-70, .col-40, .col-60, input, .place{
+/* @media only screen and (max-width: 600px){
+    input, .place{
         width: 90%;
         margin-top: 0;
     } 
@@ -190,5 +193,6 @@ i{
     .booking-btn{
         width: 150px;
     }
-}
+  
+} */
   

@@ -1,21 +1,21 @@
 let form = document.getElementById("form");
 
 let fullnameInput = document.getElementById("fullname");
-let phoneInput = document.getElementById("phone");
+let email = document.getElementById("email");
 let checkinDate = document.getElementById("check-in");
 let checkoutDate = document.getElementById("check-out");
 let travelRadios = document.querySelectorAll('input[name="travel"]');
 
 let formGroup = document.getElementsByClassName('form-group');
 
-// console.log(form)
-// console.log(fullnameInput)
-// console.log(emalInput)
-// console.log(checkinDate)
-// console.log(checkoutDate)
-// console.log(travelRadios)
-// console.log(searchForRadios)
-console.log(formGroup)
+/* console.log(form)
+console.log(fullnameInput)
+console.log(emalInput)
+console.log(checkinDate)
+console.log(checkoutDate)
+console.log(travelRadios) */
+
+console.log(formGroup);
 
 $(function () {
     $("#check-in").datepicker({
@@ -42,11 +42,12 @@ function validateForm(e) {
         formGroup[0].classList.remove("error");
         fullnameInput.classList.remove("invalid")
     }
-   /*  if (emailInputValue === "") {
-        formGroup[3].classList.add("error");
+    /* emailInputValue = emailInput.value;
+    if (emailInputValue === "") {
+        formGroup[1].classList.add("error");
         emailInput.classList.add("invalid")
     } else {
-        formGroup[3].classList.remove("error");
+        formGroup[1].classList.remove("error");
         emailInput.classList.remove("invalid")
     } */
 
