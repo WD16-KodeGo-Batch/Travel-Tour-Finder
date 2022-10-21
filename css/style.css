@@ -177,7 +177,7 @@ i{
 }
 
 /* Footer Contents */
-footer{
+/* footer{
     background: #2c2d31;
     padding: 20px 20px 20px;
     align-items: center;
@@ -204,9 +204,9 @@ footer .content a:hover{
 }
 footer i{
     font-size: 20px;
-}
+} */
 /* Copyright/Author Contents */
-.copyright{
+/* .copyright{
     background-color: #2c2d31;
     text-align: center;
     align-items: center;
@@ -220,7 +220,7 @@ footer i{
     align-items: center;
     text-align: center;
     margin: 0;
-}
+} */
 
 /* @media only screen and (max-width: 600px){
     input, .place{
