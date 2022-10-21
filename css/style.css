@@ -37,10 +37,10 @@ body{
     display: flex;
     gap: 30px;
 }
-.booking-weather img{
+/* .booking-weather img{
     width: 400px;
     padding: 0px 30px;
-}
+} */
 .container{
     background-color: #97cbdc;
     border-radius: 30px;
