@@ -81,3 +81,7 @@ function validateForm(e) {
        alert("form submitted");
    }
 }
+// Sort the destination place options in booking form
+$("#place").html($("#place option").sort(function (a, b) {
+    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+}))
