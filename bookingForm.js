@@ -82,6 +82,6 @@ function validateForm(e) {
    }
 }
 // Sort the destination place options in booking form
-$("#place").html($("#place option").sort(function (a, b) {
+$(selectId).html($(selectId + " option:not(':first-child')").sort(function(a, b) {
     return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
-}))
+ }))
